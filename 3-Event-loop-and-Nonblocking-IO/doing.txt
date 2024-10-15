@@ -1,0 +1,24 @@
+Now that we have handled multiple requests from a 
+client to a server. We have to handle multiple
+clients to a server.
+
+3 ways to deal with concurrent connections:
+1. forking
+2. multi-threading
+3. event loops
+
+Forking creates new processes for each client connection to achieve concurrency.
+Multi-threading uses threads instead of processes.
+An event loop uses polling and nonblocking IO and usually runs on a single thread
+
+Due to overhead of processes and threads, most modern production-grade
+software uses event loops for networking
+
+In Event loop we will poll the operation to tell us which fd(file descriptor) can be operated
+without blocking.
+
+Generally what happens in blocking mode is that read blocks the caller when no data in kernel,
+write blocks when write buffer is full, and accept blocks when there are no new connections in kernel queue.
+
+but in nonblocking mode, these operations are either success without blocking, or fail with the errno
+EAGAIN which means "not ready".
