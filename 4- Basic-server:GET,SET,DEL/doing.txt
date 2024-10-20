@@ -1,0 +1,15 @@
+
+Setting up server for get, set, del
+
+The protocol to be used are:
+
++------+-----+------+-----+------+-----+-----+------+
+| nstr | len | str1 | len | str2 | ... | len | strn |
++------+-----+------+-----+------+-----+-----+------+
+
+The response would be:
+
++-----+---------+
+| res | data... |
++-----+---------+
+
