@@ -1,0 +1,8 @@
+Storing key-value pairs in a hash map (data structure)
+
+1. Double Hashtable for Resizing (uses 2 hashtables ht1 & ht2)
+when load factor exceeds the maximum, resizing begins and nodes are
+moved from ht2 to ht1.
+
+The server listens for commands like get, set, del, and keys, each 
+corresponding to operations on the underlying key-value store.
