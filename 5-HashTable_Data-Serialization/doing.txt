@@ -6,3 +6,6 @@ moved from ht2 to ht1.
 
 The server listens for commands like get, set, del, and keys, each 
 corresponding to operations on the underlying key-value store.
+
+We have also generalized the encoding to handle different types of data.
+(Data Serialization) so that we can also get list of strings as response.
